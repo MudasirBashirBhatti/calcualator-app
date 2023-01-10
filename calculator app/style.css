@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: raleway;
+    src: url(./Raleway-Medium.ttf);
+}
+body {
+    color: white;
+    background-color: hsl(222, 26%, 31%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: raleway;
+    transition: .5s;
+    margin: 3em auto;
+}
+
+.parent {
+    width: 380px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.calc {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.theme-side {
+    display: flex;
+    align-items: flex-end;
+}
+
+.toggle-button {
+    width: 55px;
+    margin-left: .8em;
+
+}
+
+.toggle-button div {
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+
+}
+
+.cursor {
+    width: 100%;
+    height: 21px;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 5px;
+}
+
+.inside-toggle {
+    position: absolute;
+    height: 15px;
+    width: 18px;
+    transform: translateX(0%);
+    background-color: hsl(6, 63%, 50%);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.outputBox{
+    width: 100%;
+    padding: .4em;
+    font-size: 2.4rem;
+    text-align: right;
+    margin: .7em 0;
+    background-color: hsl(224, 36%, 15%);
+    outline: none;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    caret-color: white;
+    transition: .5s all;
+}
+
+.input-box {
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 6px;
+    width: fit-content;
+    padding: 8px;
+    transition: .5s all;
+}
+
+.input-box div {
+    display: flex;
+}
+
+.btn {
+    padding: .4em 0em;
+    width: 75px;
+    background-color: white;
+    color: hsl(223, 31%, 20%);
+    display: flex;
+    justify-self: center;
+    border-radius: 6px;
+    margin: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 3px solid hsl(28, 16%, 65%);
+    transition: .5s;
+}
+
+.btn:active{
+    border: none;
+}
+
+span {
+    margin: auto;
+}
+
+.input-box div:last-child .btn {
+    width: 50%;
+}
+
+.del,
+.reset {
+    background-color: hsl(225, 21%, 49%);
+    color: white;
+    border-bottom: 3px solid hsl(224, 28%, 35%);
+}
+
+.equal {
+    background-color: hsl(6, 63%, 50%);
+    color: white;
+    border-bottom: 3px solid hsl(6, 70%, 34%);
+}
+
+
+@media screen and (max-width : 400px) {
+    body{
+        margin: 5px auto;
+    }
+    .parent{
+        width: 95vw; 
+    }
+    .input-box{
+        width: 100%;    
+    }
+}
